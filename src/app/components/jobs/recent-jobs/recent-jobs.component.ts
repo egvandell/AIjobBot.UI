@@ -10,36 +10,39 @@ export class RecentJobsComponent {
 
   jobs: Job[] = [
     {
-      id: 1,
-      title: 'Frontend Developer',
-      description: 'We are looking for a skilled frontend developer to join our team.',
-      company: 'Acme Inc.',
-      url: 'https://www.acme.com',
-      location: 'New York, NY',
-      salary: 80000,
-      datePosted: new Date('2021-10-01')
+      "jobId": 3,
+      "jobBoardId": 789,
+      "jobName": "Full Stack Developer",
+      "Location": "Seattle, WA",
+      "Company": "Gamma LLC",
+      "ShortDesc": "Join our team as a full stack developer and help us build amazing products!",
+      "URL": "https://www.gamma.com/careers/full-stack-developer",
+      "Salary": "$120,000 - $140,000",
+      "WorkType": "Full-time",
+      "Skills": "JavaScript, React, Node.js, MongoDB",
+      "JobDescription": "As a full stack developer at Gamma LLC, you will be responsible for building and maintaining our web applications and services. You will work closely with our product and design teams to create amazing user experiences.",
+      "DateTimeFetched": new Date("2021-11-03T08:00:00Z"),
+      "AppliedTo": true,
+      "CoverLetter": null,
+      "DateTimeApplied": null
     },
     {
-      id: 2,
-      title: 'Full Stack Developer',
-      description: 'We are seeking a full stack developer to help us build our next generation platform.',
-      company: 'Beta Corp.',
-      location: 'San Francisco, CA',
-      url: 'https://www.acme.com',
-      salary: 100000,
-      datePosted: new Date('2021-09-15')
-    },
-    {
-      id: 3,
-      title: 'Backend Engineer',
-      description: 'We are looking for a backend engineer to help us scale our infrastructure.',
-      company: 'Gamma LLC',
-      location: 'Seattle, WA',
-      url: 'https://www.acme.com',
-      salary: 90000,
-      datePosted: new Date('2021-10-05')
-    }
-  ];
+      "jobId": 4,
+      "jobBoardId": 101112,
+      "jobName": "Mobile Developer",
+      "Location": "San Francisco, CA",
+      "Company": "Delta Inc.",
+      "ShortDesc": "Join our team as a mobile developer and help us build amazing apps!",
+      "URL": "https://www.delta.com/careers/mobile-developer",
+      "Salary": "$100,000 - $130,000",
+      "WorkType": "Full-time",
+      "Skills": "Swift, Kotlin, React Native",
+      "JobDescription": "As a mobile developer at Delta Inc., you will be responsible for building and maintaining our iOS and Android apps. You will work closely with our product and design teams to create amazing user experiences.",
+      "DateTimeFetched": new Date("2021-11-04T07:00:00Z"),
+      "AppliedTo": false,
+      "CoverLetter": null,
+      "DateTimeApplied": null
+    }  ];
 
   constructor() {}
 
