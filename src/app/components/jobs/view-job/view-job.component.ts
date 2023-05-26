@@ -3,11 +3,11 @@ import { Job } from 'src/app/models/jobs.model';
 import { JobsService } from 'src/app/services/jobs.service';
 
 @Component({
-  selector: 'app-recent-jobs',
-  templateUrl: './recent-jobs.component.html',
-  styleUrls: ['./recent-jobs.component.css']
+  selector: 'app-view-job',
+  templateUrl: './view-job.component.html',
+  styleUrls: ['./view-job.component.css']
 })
-export class RecentJobsComponent {
+export class ViewJobComponent {
 
   jobs: Job[] = [];
 

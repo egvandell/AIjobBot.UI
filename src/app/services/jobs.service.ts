@@ -6,13 +6,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PlayersService {
+export class JobsService {
 
   testing: string = environment.baseApiUrl;
 
   constructor(private http: HttpClient) { }
 
-  getAllPlayers(): Observable<Job[]>{
-    return this.http.get<Job[]>(this.testing + '/api/Jobs');
+  GetAllJobOpportunities(): Observable<Job[]>{
+    return this.http.get<Job[]>(this.testing + '/api/JobOpportunity/GetJobOpportunities');
   }
 }

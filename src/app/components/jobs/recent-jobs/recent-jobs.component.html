@@ -9,7 +9,6 @@
           <th class="text-center">Location</th>
           <th class="text-center">Company</th>
           <th class="text-center">Short Description</th>
-          <th class="text-center">URL</th>
           <th class="text-center">Salary</th>
           <th class="text-center">Work Type</th>
           <th class="text-center">Skills</th>
@@ -21,15 +20,12 @@
       </thead>
       <tbody>
         <tr *ngFor="let job of jobs">
-          <td>{{job.jobId}}</td>
+          <td><a [routerLink]="['/jobs', 'view', job.jobId ]">View</a></td>
           <td>{{job.jobBoardId}}</td>
           <td>{{job.jobName}}</td>
           <td>{{job.Location}}</td>
           <td>{{job.Company}}</td>
           <td>{{job.ShortDesc}}</td>
-          <td>
-            <a target="_blank" href="{{ job.URL }}" target="_blank">VIEW</a>
-          </td>
           <td>{{job.Salary}}</td>
           <td>{{job.WorkType}}</td>
           <td>{{job.Skills}}</td>
