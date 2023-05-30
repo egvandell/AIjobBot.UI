@@ -11,7 +11,6 @@
           <th class="text-center">Job Description</th>
           <th class="text-center">Salary</th>
           <th class="text-center">Work Type</th>
-          <th class="text-center">Skills</th>
           <th class="text-center">Date Time Fetched</th>
           <th class="text-center">Applied To</th>
 
@@ -19,20 +18,20 @@
       </thead>
       <tbody>
         <tr *ngFor="let job of jobs">
-          <td><a [routerLink]="['/jobs', 'view', job.jobId ]">View</a></td>
-          <td>{{job.jobBoardId}}</td>
-          <td>{{job.jobName}}</td>
-          <td>{{job.location}}</td>
-          <td>{{job.company}}</td>
-          <td>{{ job.jobDescription | slice:0:100 }}...</td>
-          <td>{{job.salary}}</td>
-          <td>{{job.workType}}</td>
-          <td>{{job.skills}}</td>
+          <td class="text-center"><a [routerLink]="['/jobs', 'view', job.jobId ]">View</a></td>
+          <td class="text-center">{{job.jobBoardId}}</td>
+          <td class="text-center">{{job.jobName}}</td>
+          <td class="text-center">{{job.location}}</td>
+          <td class="text-center">{{job.company}}</td>
+          <td class="text-center">{{ job.jobDescription | slice:0:100 }}...</td>
+          <td class="text-center">{{job.salary}}</td>
+          <td class="text-center">{{job.workType}}</td>
           <td class="text-center">{{ job.dateTimeFetched | date:'MM/dd/yyyy h:mm a' }}</td>
-          <td [ngClass]="{'text-danger': !job.appliedTo, 'text-success': job.appliedTo}" class="text-center">
-            <span *ngIf="job.appliedTo">Yes</span>
-            <span *ngIf="!job.appliedTo">No</span>
+          <td class="text-center" [ngClass]="{'text-danger': !job.appliedTo, 'text-success': job.appliedTo}">
+              <span *ngIf="job.appliedTo">Yes</span>
+              <span *ngIf="!job.appliedTo">No</span>
           </td>
+          
         </tr>
       </tbody>
     </table>

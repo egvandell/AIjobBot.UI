@@ -1,59 +1,44 @@
 <div class="container my-5">
     <h1 class="mb-3">Job Details</h1>
+
+    <!-- Header Section -->
+    <div class="row">
+        <div class="col-12">
+            <h2><a href="{{jobDetails.url}}" target="_blank">{{jobDetails.jobName}}</a></h2>
+            <div style="font-size: 0.9rem;">
+                <div class="row">
+                    <div class="col-6">
+                        <p><strong>Location:</strong> {{jobDetails.location}}</p>
+                        <p><strong>Company:</strong> {{jobDetails.company}}</p>
+                        <p><strong>Salary:</strong> {{jobDetails.salary}}</p>
+                        <p><strong>Work Type:</strong> {{jobDetails.workType}}</p>
+                    </div>
+                    <div class="col-6">
+                        <p><strong>Skills:</strong> {{jobDetails.skills}}</p>
+                        <p><strong>Date Time Fetched:</strong> {{jobDetails.dateTimeFetched | date:'MM/dd/yyyy h:mm a'}}</p>
+                        <p><strong>Applied To:</strong> {{jobDetails.appliedTo ? 'Yes' : 'No'}}</p>
+                        <p><strong>Date Time Applied:</strong> {{jobDetails.dateTimeApplied | date:'MM/dd/yyyy h:mm a'}}</p>
+                    </div>
+                </div>
+                <p><strong>Job Description:</strong> {{jobDetails.jobDescription}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Details Section -->
     <div class="row">
         <div class="col-6">
-    <form #form="ngForm" (ngSubmit)="updateJob()">
-        <div class="mb-3">
-            <label for="" class="form-label">Job Title</label>
-            <input type="email" class="form-control" id="jobTitle" readonly placeholder="jobDetails.jobTitle">
+            <form #form="ngForm" (ngSubmit)="updateJob()">
+                <div class="mb-3">
+                    <label for="coverLetter" class="form-label">Cover Letter</label>
+                    <textarea class="form-control" id="coverLetter" name="coverLetter" [(ngModel)]="jobDetails.coverLetter" rows="3"></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="appliedTo" name="appliedTo" [(ngModel)]="jobDetails.appliedTo">
+                    <label class="form-check-label" for="appliedTo">Applied To</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Location</label>
-            <input type="email" class="form-control" id="location" name="location" 
-            [(ngModel)]="jobDetails.location">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Company</label>
-            <input type="email" class="form-control" id="company" name="company" 
-            [(ngModel)]="jobDetails.company">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
 </div>
-</div>
-</div>
-    <!--
-
-            <tr>
-                <th>Location</th>
-                <td><input type="text" id="test" name="test" [(ngModel)]="jobDetails.location" /></td>
-            </tr>
-            <tr>
-                <th>Company</th>
-                <td>{{jobDetails.company}}</td>
-                <th>Salary</th>
-                <td>{{jobDetails.salary}}</td>
-                <th>Work Type</th>
-                <td>{{jobDetails.workType}}</td>
-            </tr>
-            <tr>
-                <th>Skills</th>
-                <td>{{jobDetails.skills}}</td>
-                <th>DateTime Fetched</th>
-                <td>{{job.dateTimeFetched}}</td>
-                <th>Applied To</th>
-                <td>{{job.appliedTo ? 'Yes' : 'No'}}</td>
-            </tr>
-            <tr>
-                <th>Job Description</th>
-                <td colspan="5">{{job.jobDescription}}</td>
-            </tr>
-            <tr>
-                <th>DateTime Applied</th>
-                <td colspan="5">{{job.dateTimeApplied}}</td>
-            </tr>
-            <tr>
-                <th>Cover Letter</th>
-                <td colspan="5">{{job.coverLetter}}</td>
-            </tr>
-    -->

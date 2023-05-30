@@ -54,10 +54,10 @@ export class ViewJobComponent {
   }
 
   updateJob(): void { 
-      this.jobsService.updateJob(this.jobDetails)
+      this.jobsService.updateJob(this.jobDetails.jobId, this.jobDetails)
       .subscribe({
         next: (job) => {
-          this.router.navigate(['/jobs']);
+          this.router.navigate(['/']);
           console.log(job);
         }
     });
