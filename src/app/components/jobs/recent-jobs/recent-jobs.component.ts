@@ -14,7 +14,7 @@ export class RecentJobsComponent {
   constructor(private jobsService: JobsService) { }  
 
   ngOnInit(): void {
-    this.jobsService.GetAllJobOpportunities()
+    this.jobsService.GetJobOpportunities()
       .subscribe({
         next: (jobs: any) => {
           this.jobs = jobs;

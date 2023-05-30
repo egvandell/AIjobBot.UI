@@ -8,11 +8,19 @@ import { Observable } from 'rxjs';
 })
 export class JobsService {
 
-  testing: string = environment.baseApiUrl;
+  baseApiUrl: string = environment.baseApiUrl;
 
   constructor(private http: HttpClient) { }
 
-  GetAllJobOpportunities(): Observable<Job[]>{
-    return this.http.get<Job[]>(this.testing + '/api/JobOpportunity/GetJobOpportunities');
+  GetJobOpportunities(): Observable<Job[]>{
+    return this.http.get<Job[]>(this.baseApiUrl + '/api/JobOpportunity/GetJobOpportunities');
+  }
+
+  GetJobOpportunity(jobId: number): Observable<Job> {
+    return this.http.get<Job>(this.baseApiUrl + '/api/JobOpportunity/GetJobOpportunity/' + jobId);
+  }
+
+  updateJob(jobDetails: Job): Observable<Job> {
+    return this.http.post<Job>(`${this.baseApiUrl}/api/JobOpportunity/UpdateJobOpportunity`, jobDetails)
   }
 }
