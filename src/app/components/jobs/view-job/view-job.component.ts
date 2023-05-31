@@ -54,7 +54,7 @@ export class ViewJobComponent {
   }
 
   updateJob(): void { 
-      this.jobsService.updateJob(this.jobDetails.jobId, this.jobDetails)
+      this.jobsService.UpdateJob(this.jobDetails.jobId, this.jobDetails)
       .subscribe({
         next: (job) => {
           this.router.navigate(['/']);

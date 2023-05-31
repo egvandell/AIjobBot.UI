@@ -20,7 +20,11 @@ export class JobsService {
     return this.http.get<Job>(this.baseApiUrl + '/api/JobOpportunity/' + jobId);
   }
 
-  updateJob(jobId: number, jobDetails: Job): Observable<Job> {
+  UpdateJob(jobId: number, jobDetails: Job): Observable<Job> {
     return this.http.put<Job>(`${this.baseApiUrl}/api/JobOpportunity/` + jobId, jobDetails)
+  }
+
+  DeleteJob(jobId: number): Observable<Job> {
+    return this.http.delete<Job>(this.baseApiUrl + '/api/JobOpportunity/' + jobId);
   }
 }

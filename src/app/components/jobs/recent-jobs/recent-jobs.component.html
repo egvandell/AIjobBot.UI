@@ -18,7 +18,10 @@
       </thead>
       <tbody>
         <tr *ngFor="let job of jobs">
-          <td class="text-center"><a [routerLink]="['/jobs', 'view', job.jobId ]">View</a></td>
+          <td class="text-center">
+            <a [routerLink]="['/jobs', 'view', job.jobId ]">View</a> | 
+            <a href="#" (click)="deleteJob(job.jobId, $event)">Delete</a>
+          </td>
           <td class="text-center">{{job.jobBoardId}}</td>
           <td class="text-center">{{job.jobName}}</td>
           <td class="text-center">{{job.location}}</td>
