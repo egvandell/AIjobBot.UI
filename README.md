@@ -1,5 +1,25 @@
 # AIjobBotUI
 
+Project makes use of the environment.ts / environment.development.ts files
+4 variables:
+
+export const environment = {
+    production: false,
+    baseApiUrl: 'https://localhost:7298',
+    COVER_LETTER_HEADER: 'John Smith\n212.555.1212 | john@smith.com',
+    COVER_LETTER_BODY: `Hi,
+
+I saw your posting where you're looking for a [[jobName]].  I am a blah blah blah. 
+
+More blah blah blahs
+
+Thanks!
+
+John Smith`
+};
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server

@@ -35,7 +35,8 @@ export class ViewJobComponent implements OnInit {
       dateTimeFetched: new Date(),
       appliedTo: false,
       coverLetter: '',
-      dateTimeApplied: new Date()
+      dateTimeApplied: new Date(),
+      ignore: false,
     }
 
   constructor(private jobsService: JobsService, private route: ActivatedRoute, private router: Router) { }

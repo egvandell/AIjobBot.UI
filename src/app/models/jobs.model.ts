@@ -14,4 +14,5 @@ export interface Job {
     appliedTo: boolean;
     coverLetter: string | null;
     dateTimeApplied: Date | null;
+    ignore: boolean;
 }
