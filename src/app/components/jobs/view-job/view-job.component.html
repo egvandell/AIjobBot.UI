@@ -27,17 +27,19 @@
 
     <!-- Details Section -->
     <div class="row">
-        <div class="col-6">
+        <div>
             <form #form="ngForm" (ngSubmit)="updateJob()">
                 <div class="mb-3">
-                    <label for="coverLetter" class="form-label">Cover Letter</label>
-                    <textarea class="form-control" id="coverLetter" name="coverLetter" [(ngModel)]="jobDetails.coverLetter" rows="3"></textarea>
+                    <label for="coverLetter" class="form-label">Cover Letter</label>                 
+                    <button type="button" class="btn btn-primary" (click)="exportPDF()">Export to PDF</button>
+                    <textarea class="form-control w-100" id="coverLetter" name="coverLetter" 
+                        [(ngModel)]="coverLetterText" rows="10"></textarea>
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="appliedTo" name="appliedTo" [(ngModel)]="jobDetails.appliedTo">
                     <label class="form-check-label" for="appliedTo">Applied To</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Save</button>
                             </form>
         </div>
     </div>
