@@ -17,15 +17,7 @@ import { environment } from 'src/environments/environment';
 export class ViewJobComponent implements OnInit {
 
 
-    coverLetterText: string = `Hi,
-
-I saw your posting where you're looking for a [[jobName]].  I am a senior full stack developer with 20+ years experience.  I've worked extensively in the trenches doing development as well as in PM roles over the years which has enabled me to quickly jump in and understand most operations very quickly.
-
-I'd like to discuss this opportunity further, are you available for a quick chat?
-
-Thanks!
-
-Greg Van Dell`;
+    coverLetterText: string = environment.COVER_LETTER_BODY;
     
 
     jobDetails: Job = {
@@ -93,7 +85,7 @@ Greg Van Dell`;
   const pageWidth = doc.internal.pageSize.getWidth();
   
   // Define the header text and align it to the center
-  const header = environment.baseApiUrl;
+  const header = environment.COVER_LETTER_HEADER;
 
 
   doc.setFontSize(headerFontSize);
