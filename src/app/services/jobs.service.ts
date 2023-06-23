@@ -13,18 +13,18 @@ export class JobsService {
   constructor(private http: HttpClient) { }
 
   GetJobOpportunities(): Observable<Job[]>{
-    return this.http.get<Job[]>(this.baseApiUrl + '/api/JobOpportunity/');
+    return this.http.get<Job[]>(this.baseApiUrl + '/JobOpportunity/');
   }
 
   GetJobOpportunity(jobId: number): Observable<Job> {
-    return this.http.get<Job>(this.baseApiUrl + '/api/JobOpportunity/' + jobId);
+    return this.http.get<Job>(this.baseApiUrl + '/JobOpportunity/' + jobId);
   }
 
   UpdateJob(jobId: number, jobDetails: Job): Observable<Job> {
-    return this.http.put<Job>(`${this.baseApiUrl}/api/JobOpportunity/` + jobId, jobDetails)
+    return this.http.put<Job>(`${this.baseApiUrl}/JobOpportunity/` + jobId, jobDetails)
   }
 
   DeleteJob(jobId: number): Observable<Job> {
-    return this.http.delete<Job>(this.baseApiUrl + '/api/JobOpportunity/' + jobId);
+    return this.http.delete<Job>(this.baseApiUrl + '/JobOpportunity/' + jobId);
   }
 }
