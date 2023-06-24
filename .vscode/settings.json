@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/014e356e-d29c-4f22-98f8-9f378749800e/resourceGroups/DefaultResourceGroup-EUS/providers/Microsoft.Web/sites/AIjobBotFE",
+    "appService.deploySubpath": "dist\\aijob-bot.ui"
+}
