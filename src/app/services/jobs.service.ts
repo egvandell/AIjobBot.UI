@@ -27,4 +27,9 @@ export class JobsService {
   DeleteJob(jobId: number): Observable<Job> {
     return this.http.delete<Job>(this.baseApiUrl + '/JobOpportunity/' + jobId);
   }
+
+  GenerateAIcoverLetter(jobId: number): Observable<Job> {
+    return this.http.get<Job>(this.baseApiUrl + '/GenerateCoverLetter/' + jobId);
+  }
+
 }
